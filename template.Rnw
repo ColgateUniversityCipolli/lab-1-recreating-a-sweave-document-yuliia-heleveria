@@ -147,6 +147,22 @@ result.with.error
 
 The result is \Sexpr{result.with.error}. Note that I did not type the result, but I used the \verb|\Sexpr{}| command.
 
+\subsection{Plotting}
+We can also plot with R.
+
+<<plot1, eval=FALSE, size='scriptsize'>>=
+#Plot a histogram of random exponential data
+hist(rexp(100))
+@
+\begin{figure}[H] \begin{center}
+<<echo=FALSE, warning=FALSE, message=FALSE, fig.dim=c(5,3.5)>>=
+<<plot1>>
+@
+\caption{A histogram of random exponentially distributed data, $n=100$.} \label{plot1} %we can now reference plot1
+\end{center}
+\end{figure}
+\columnbreak
+
 \section{Results}
 Tie together the Introduction -- where you introduce the problem at hand -- and the methods --  what you propose to do to answer the question. Present your data, the results of your analyses, and how each reported aspect contributes to answering the question. This section should include table(s), statistic(s), and graphical displays. Make sure to put the results in a sensible order and that each result contributes a logical and developed solution. It should not just be a list. Avoid being repetitive. 
 

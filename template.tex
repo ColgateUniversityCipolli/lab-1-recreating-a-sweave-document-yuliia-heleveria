@@ -217,12 +217,33 @@ We can also call object values from R directly.
 \hldef{result.with.error}
 \end{alltt}
 \begin{verbatim}
-## [1] 40.91262
+## [1] 40.74199
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
 
-The result is 40.9126195. Note that I did not type the result, but I used the \verb|\Sexpr{}| command.
+The result is 40.7419895. Note that I did not type the result, but I used the \verb|\Sexpr{}| command.
+
+\subsection{Plotting}
+We can also plot with R.
+
+\begin{knitrout}\scriptsize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcom{#Plot a histogram of random exponential data}
+\hlkwd{hist}\hldef{(}\hlkwd{rexp}\hldef{(}\hlnum{100}\hldef{))}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+\begin{figure}[H] \begin{center}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-6-1} 
+\end{knitrout}
+\caption{A histogram of random exponentially distributed data, $n=100$.} \label{plot1} %we can now reference plot1
+\end{center}
+\end{figure}
+\columnbreak
 
 \section{Results}
 Tie together the Introduction -- where you introduce the problem at hand -- and the methods --  what you propose to do to answer the question. Present your data, the results of your analyses, and how each reported aspect contributes to answering the question. This section should include table(s), statistic(s), and graphical displays. Make sure to put the results in a sensible order and that each result contributes a logical and developed solution. It should not just be a list. Avoid being repetitive. 
