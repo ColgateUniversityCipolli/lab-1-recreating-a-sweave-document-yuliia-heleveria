@@ -207,7 +207,7 @@ Below is a table from a paper I’m currently working on. Without the analysis o
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{l r r r r r }\hline
-Term & \# SS (Type III) & \# df & \# F & \# p-value & \# $\epsilon_p2$ \\
+Term & \ SS (Type III) & \ df & \ F & \ p-value & \ $\epsilon_p2$ \\
 \hline \\hline
 \end{tabular} \label{full.sleep.tab}
 \end{center}
