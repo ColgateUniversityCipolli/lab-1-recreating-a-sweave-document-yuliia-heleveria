@@ -98,6 +98,26 @@ We can write a lettered list in Sweave.
 \subsection{Submissions}
 This part of the midterm is due Sunday November 14 by 5p. I will not accept late submissions. Note that you may use this template to help build your introduction and methods sections, and you can use the work you did as a group during the datathon. Still, I expect this submission to be your own summary and extension of that work without collaboration.
 
+\subsection{Typing Mathematical Equations}
+We can write a one line equation that is centered like this
+  \[\widehat{y_i} = \beta_0 + \beta_1 x_{1i}+ \beta_2 x_{2i} + \epsilon_i.\]
+This can be written in the text, as $\widehat{y_i} = \beta_0 + \beta_1 x_{1i}+ \beta_2 x_{2i} + \epsilon_i$ using as well.
+
+When we need to show multiple steps, we can create a multi-line equation that is centered like this:
+\begin{align*}
+ 8(x-5)+x&=9(x-5)+5\\
+ 8x-40+x&=9x-45+5 \tag{Distributing} \\
+ 9x-40&=9x-40 \tag{Combining like terms} \\
+ 9x&=9x \tag{Adding 40 to both sides} \\
+ x&=x \tag{Dividing both sides by 9} 
+ \end{align*}
+The equality holds for any x.
+
+Note, I did a page break here so that the next section
+started on a clean page.
+\pagebreak
+
+
 Describe the data you are working with, if applicable. Describe the specific process you will follow to answer the question at hand. This does not mean you should write something like this.
 \begin{quote}
 \textit{I did this and then I did that and then I did this other thing and then..., and then..., and then...}
