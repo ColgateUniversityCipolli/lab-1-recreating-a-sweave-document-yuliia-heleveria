@@ -60,11 +60,19 @@ For this lab, you will
 \textbf{Remark:} You will find the class Sweave cheatsheet to be \emph{incredibly} (\verb|\emph{incredibly}|) helpful.
 
 
-\subsection{Intro Subsection}
-You might need/want to discuss the topics in subsections. Or, you may have multiple questions.
+\section{Word Processing Tasks}
 
+\subsection{Centering Text}
+\begin{center}
+We can center text in Sweave.
+\end{center}
 
-\section{Methods}
+\subsection{Bold, Italics, and Underlining}
+We can \textbf{bold}, \textit{italicize}, \underline{underline}, and \emph{emphasize} text in Sweave.
+
+Note, I did a column break here so that the list wasn’t broken across columns.
+\columnbreak 
+
 Describe the data you are working with, if applicable. Describe the specific process you will follow to answer the question at hand. This does not mean you should write something like this.
 \begin{quote}
 \textit{I did this and then I did that and then I did this other thing and then..., and then..., and then...}
