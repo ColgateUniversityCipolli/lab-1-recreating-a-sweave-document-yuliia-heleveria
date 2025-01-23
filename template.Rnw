@@ -224,4 +224,19 @@ Residuals & \ 506.92 & \ 550.00 & \  & \  & \  \\
 \end{center}
 \end{table}
 
+The \texttt{palmerpenguins} package for \texttt{R} \citep{palmerpen} provides data on adult foraging penguins near Palmer Station, Antarctica. Figure \ref{figure2} is too big to fit nicely in our column-based-template above, so I’ve placed it here in the abstract by saving it and presenting it scaled to 0.75.
+
+<<plot = 0.75, eval=FALSE, size='scriptsize'>>=
+library(palmerpenguins)
+pdf("figure/penguins.pdf", width = 8, height = 5)
+plot(penguins)
+dev.off()
+@
+
+\begin{figure}[H] \begin{center}
+\includegraphics[scale=0.75]{figure/penguins.pdf}
+\caption{Data on adult foraging penguins near Palmer Station, Antarctica.} \label{figure2}
+\end{center}
+\end{figure}
+
 \end{document}

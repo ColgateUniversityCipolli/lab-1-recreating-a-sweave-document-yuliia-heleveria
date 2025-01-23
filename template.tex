@@ -217,12 +217,12 @@ We can also call object values from R directly.
 \hldef{result.with.error}
 \end{alltt}
 \begin{verbatim}
-## [1] 41.13083
+## [1] 41.04617
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
 
-The result is 41.1308303. Note that I did not type the result, but I used the \verb|\Sexpr{}| command.
+The result is 41.0461672. Note that I did not type the result, but I used the \verb|\Sexpr{}| command.
 
 \subsection{Plotting}
 We can also plot with R.
@@ -278,7 +278,7 @@ If we want to print this nicely, we can do so using the xtable package \citep{xt
 \end{kframe}
 \end{knitrout}
 % latex table generated in R 4.4.2 by xtable 1.8-4 package
-% Thu Jan 23 15:47:06 2025
+% Thu Jan 23 17:22:49 2025
 \begin{table}[H]
 \centering
 \begingroup\small
@@ -338,5 +338,24 @@ Residuals & \ 506.92 & \ 550.00 & \  & \  & \  \\
 \label{full.sleep.tab}
 \end{center}
 \end{table}
+
+The \texttt{palmerpenguins} package for \texttt{R} \citep{palmerpen} provides data on adult foraging penguins near Palmer Station, Antarctica. Figure \ref{figure2} is too big to fit nicely in our column-based-template above, so I’ve placed it here in the abstract by saving it and presenting it scaled to 0.75.
+
+\begin{knitrout}\scriptsize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{library}\hldef{(palmerpenguins)}
+\hlkwd{pdf}\hldef{(}\hlsng{"figure/penguins.pdf"}\hldef{,} \hlkwc{width} \hldef{=} \hlnum{8}\hldef{,} \hlkwc{height} \hldef{=} \hlnum{5}\hldef{)}
+\hlkwd{plot}\hldef{(penguins)}
+\hlkwd{dev.off}\hldef{()}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+\begin{figure}[H] \begin{center}
+\includegraphics[scale=0.75]{figure/penguins.pdf}
+\caption{Data on adult foraging penguins near Palmer Station, Antarctica.} \label{figure2}
+\end{center}
+\end{figure}
 
 \end{document}
