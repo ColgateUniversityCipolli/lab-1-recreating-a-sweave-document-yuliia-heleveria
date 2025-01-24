@@ -74,11 +74,15 @@
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Top of the article page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \vspace{-1in}
 \title{Lab 1 -- MATH 240 -- Computational Statistics}
 
 \author{
-  Yuliia Heleveriaa \\
+  Yuliia Heleveria \\
   Colgate University  \\
   Mathematics  \\
   {\tt yheleveria@colgate.edu}
@@ -89,57 +93,74 @@
 \maketitle
 
 \begin{multicols}{2}
-\begin{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Abstract and keywords
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract} %Abstract
 This document provides a basic template for the 2-page labs we will complete each week. Here, you should provide a succinct summary about what you did and why it might be helpful.
 \end{abstract}
 
+%Keywords
 \textbf{Keywords:} What topics does the lab cover with respect to class?
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Instructions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Introduction}
+\section{Instructions}
 For this lab, you will
-\begin{enumerate}
+\begin{enumerate} %Begin enumerated list
   \item Install \href{https://cran.rstudio.com/}{R} and \href{https://posit.co/download/rstudio-desktop/}{RStudio}
   \item Install tinytex (if necessary):
   \newline
      \texttt{install.packages("tinytex")}
-  \item Create a GitHub account \href{https://github.com/}{here}, and email me your user- name.
+  \item Create a GitHub account \href{https://github.com/}{here}, and email me your username.
   \item Install \href{https://desktop.github.com/}{GitHub desktop}.
   \item Accept the LAB 1 assignment \href{https://classroom.github.com/a/gfC_xMMl}{here}. 
   \item Recreate this document (except put your name/info at the top) to get used to writing in \LaTeX~ and to see the types of things we can do when creating a document to convey statistical information. Make sure to commit and push your work using GitHub desktop as you finish each section.
 \end{enumerate}
-\textbf{Remark:} You will find the class Sweave cheatsheet to be \emph{incredibly} (\verb|\emph{incredibly}|) helpful.
 
+%Remark at the end of introduction
+\noindent \textbf{Remark:} You will find the class Sweave cheatsheet to be \emph{incredibly} (\verb|\emph{incredibly}|) helpful.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Word Processing Tasks
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Word Processing Tasks}
 
+%Centering Text
 \subsection{Centering Text}
 \begin{center}
 We can center text in Sweave.
 \end{center}
 
+%Font formating
 \subsection{Bold, Italics, and Underlining}
 We can \textbf{bold}, \textit{italicize}, \underline{underline}, and \emph{emphasize} text in Sweave.
 
 Note, I did a column break here so that the list wasn’t broken across columns.
 \columnbreak 
 
+%Various list formats
 \subsection{Lists, and Numbered Lists}
 We can write an unordered list in Sweave.
-\begin{itemize}
+\begin{itemize}\itemsep0em
   \item first item
   \item second item
   \item third item
 \end{itemize}
 
-We can write a numbered list in Sweave.
-\begin{enumerate}
+\noindent We can write a numbered list in Sweave.
+\begin{enumerate}[1.]\itemsep0em
   \item first item
   \item second item
   \item third item
 \end{enumerate}
 
-We can write a lettered list in Sweave.
+\noindent We can write a lettered list in Sweave.
 \begin{enumerate}[a.]\itemsep0em
   \item{first item}
   \item{second item}
@@ -149,12 +170,14 @@ We can write a lettered list in Sweave.
 \subsection{Submissions}
 This part of the midterm is due Sunday November 14 by 5p. I will not accept late submissions. Note that you may use this template to help build your introduction and methods sections, and you can use the work you did as a group during the datathon. Still, I expect this submission to be your own summary and extension of that work without collaboration.
 
+%Equations
 \subsection{Typing Mathematical Equations}
 We can write a one line equation that is centered like this
-  \[\widehat{y_i} = \beta_0 + \beta_1 x_{1i}+ \beta_2 x_{2i} + \epsilon_i.\]
-This can be written in the text, as $\widehat{y_i} = \beta_0 + \beta_1 x_{1i}+ \beta_2 x_{2i} + \epsilon_i$ using as well.
+  \[\widehat{y_i} = \beta_0 + \beta_1 x_{1i}+ \beta_2 x_{2i} + \beta_3 x_{1i} x_{2i} + \epsilon_i.\]
+This can be written in the text, as $\widehat{y_i} = \beta_0 + \beta_1 x_{1i}+ \beta_2 x_{2i} + \beta_3 x_{1i} x_{2i}+ \epsilon_i$ using as well.
 
 When we need to show multiple steps, we can create a multi-line equation that is centered like this:
+%Multi-line equation
 \begin{align*}
  8(x-5)+x&=9(x-5)+5\\
  8x-40+x&=9x-45+5 \tag{Distributing} \\
@@ -168,7 +191,7 @@ Note, I did a page break here so that the next section
 started on a clean page.
 \pagebreak
 
-
+%R code
 \subsection{Running R Code}
 Code chunks can be entered into Sweave; e.g., here are some comments.
 
@@ -180,7 +203,9 @@ Code chunks can be entered into Sweave; e.g., here are some comments.
 \end{alltt}
 \end{kframe}
 \end{knitrout}
-Below, you can see that we can do algebra with R.
+
+%Evaluating algebraic expression
+Below, you can see that we can do algebra with \texttt{R}.
 \begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
@@ -191,6 +216,8 @@ Below, you can see that we can do algebra with R.
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
+
+%Code without evaluation
 Below, we show we can produced the code without evaluating it.
 \begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
@@ -199,6 +226,8 @@ Below, we show we can produced the code without evaluating it.
 \end{alltt}
 \end{kframe}
 \end{knitrout}
+
+%Evaluation with no visible code
 Alternatively, we can produced the output without the code.
 \begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
@@ -208,7 +237,8 @@ Alternatively, we can produced the output without the code.
 \end{kframe}
 \end{knitrout}
 
-We can also call object values from R directly.
+%Creating and calling an object
+We can also call object values from \texttt{R} directly.
 \begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
@@ -217,16 +247,18 @@ We can also call object values from R directly.
 \hldef{result.with.error}
 \end{alltt}
 \begin{verbatim}
-## [1] 41.04617
+## [1] 41.16062
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
 
-The result is 41.0461672. Note that I did not type the result, but I used the \verb|\Sexpr{}| command.
+%Using an object
+The result is 41.1606239. Note that I did not type the result, but I used the \verb|\Sexpr{}| command.
 
 \subsection{Plotting}
 We can also plot with R.
 
+%Plotting histograms
 \begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
@@ -245,6 +277,7 @@ We can also plot with R.
 \end{figure}
 \columnbreak
 
+%Craeting a table
 \subsection{Tables}
 Below, we load and take a peek at some data about the death rates per 1000 in Virginia in 1940 \citep{molyneaux}.
 
@@ -278,7 +311,7 @@ If we want to print this nicely, we can do so using the xtable package \citep{xt
 \end{kframe}
 \end{knitrout}
 % latex table generated in R 4.4.2 by xtable 1.8-4 package
-% Thu Jan 23 17:22:49 2025
+% Thu Jan 23 21:21:12 2025
 \begin{table}[H]
 \centering
 \begingroup\small
@@ -319,10 +352,11 @@ Rural Male & Rural Female & Urban Male & Urban Female \\
 
 Below is a table from a paper I’m currently working on. Without the analysis object in R, I have to create this table myself.
 
+%Creating our own table from scratch
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{l r r r r r }
-\hline Term & \ SS (Type III) & \ df & \ F & \ p-value & \ $\epsilon_p2$ \\
+\hline Term & \ SS (Type III) & \ df & \ F & \ p-value & \ $\epsilon^2_p$ \\
 \hline (Intercept) & \ 4.95 & \ 1.00 & \ 5.37 & \ 0.0209 & \  \\
 White-Poor (\textit{Z}) & \ 3.17 & \ 1.00 & \ 3.44 & \ 0.0642 & \ 0.02 \\
 Zero-Sum (\textit{Z}) & \ 17.96 & \ 1.00 & \ 19.48 & \ $<$ 0.0001 & \ 0.03 \\
@@ -335,12 +369,13 @@ Residuals & \ 506.92 & \ 550.00 & \  & \  & \  \\
 \hline
 \end{tabular} 
 \caption{ANOVA table for Case Study I.}
-\label{full.sleep.tab}
+\label{penguin.tab}
 \end{center}
 \end{table}
 
 The \texttt{palmerpenguins} package for \texttt{R} \citep{palmerpen} provides data on adult foraging penguins near Palmer Station, Antarctica. Figure \ref{figure2} is too big to fit nicely in our column-based-template above, so I’ve placed it here in the abstract by saving it and presenting it scaled to 0.75.
 
+%Plot the data
 \begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
